@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanouel State Platform</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Κράτος Emmanouel — Διαλειτουργική Πλατφόρμα</h1>
+      <p>Ιστότοπος πολιτών, Back-Office Issuer Dashboard και Ψηφιακό Πορτοφόλι σε ένα ενιαίο σύστημα.</p>
+    </header>
+
+    <main class="grid">
+      <section>
+        <h2>Ιστότοπος: Εγγραφή</h2>
+        <form id="citizenForm">
+          <input name="full_name" placeholder="Ονοματεπώνυμο" required />
+          <input name="tax_id" placeholder="ΑΦΜ" required />
+          <input name="email" placeholder="Email" required />
+          <button type="submit">Εγγραφή Πολίτη</button>
+        </form>
+
+        <form id="enterpriseForm">
+          <input name="legal_name" placeholder="Επωνυμία" required />
+          <input name="tax_id" placeholder="ΑΦΜ επιχείρησης" required />
+          <input name="representative_holder_id" placeholder="wallet:CIT-00001" required />
+          <button type="submit">Εγγραφή Επιχείρησης</button>
+        </form>
+
+        <h3>Διαβούλευση Πολιτικών</h3>
+        <ul id="policyFeed"></ul>
+      </section>
+
+      <section>
+        <h2>Back-Office Issuer Dashboard</h2>
+        <form id="policyForm">
+          <input name="title" placeholder="Τίτλος πολιτικής" required />
+          <input name="summary" placeholder="Σύνοψη" required />
+          <textarea name="details" placeholder="Λεπτομέρειες"></textarea>
+          <button type="submit">Δημοσίευση Πολιτικής</button>
+        </form>
+
+        <form id="certificateForm">
+          <input name="holder_id" placeholder="wallet:CIT-00001" required />
+          <input name="type" placeholder="Τύπος πιστοποιητικού" required />
+          <button type="submit">Έκδοση Πιστοποιητικού</button>
+        </form>
+
+        <div id="dashboard"></div>
+      </section>
+
+      <section>
+        <h2>Ψηφιακό Πορτοφόλι</h2>
+        <form id="walletForm">
+          <input name="holder_id" placeholder="wallet:CIT-00001" required />
+          <button type="submit">Φόρτωση πορτοφολιού</button>
+        </form>
+        <div id="wallet"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
